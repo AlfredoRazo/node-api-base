@@ -2,7 +2,7 @@ const {getTransporter} = require('../../config/mail');
 
 const sendMailAccount = async (usuario,password) => {
     let transporter = await getTransporter();
-    let info = await transporter.sendMail({
+    await transporter.sendMail({
         from: '"Fred Foo 👻" <foo@example.com>',
         to: usuario.email,
         subject: "Hello ✔",
